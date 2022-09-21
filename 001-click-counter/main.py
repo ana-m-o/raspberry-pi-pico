@@ -2,19 +2,32 @@ import RGB1602
 import utime
 from machine import Pin
 
+
+def printNumber(number):
+    lcd.setCursor(0, 0)  # First line of the screen
+    lcd.printout(count)
+    printLabels()
+
+
+def printLabels():  # Buttons labels
+    lcd.setCursor(0, 1)  # Second line of the screen
+    lcd.printout("Add")
+    lcd.setCursor(11, 1)
+    lcd.printout("Reset")
+
+
 button_1 = Pin(8, Pin.IN, Pin.PULL_DOWN)
 button_2 = Pin(10, Pin.IN, Pin.PULL_DOWN)
 
 lcd = RGB1602.RGB1602(16, 2)
 rgb = (0, 128, 60)
 dangerRgb = (255, 0, 0)
-
 count = 0
 
 # Default screen color
 lcd.setRGB(rgb[0], rgb[1], rgb[2])
-lcd.setCursor(0, 0)
-lcd.printout(count)
+
+printNumber(count)
 
 while True:
 
@@ -22,8 +35,7 @@ while True:
     if button_1.value() == 1:
         count = count + 1
         utime.sleep(0.3)
-        lcd.clear()
-        lcd.printout(count)
+        printNumber(count)
 
     # Reset button
     if button_2.value() == 1:
@@ -40,4 +52,4 @@ while True:
 
         # Default screen color
         lcd.setRGB(rgb[0], rgb[1], rgb[2])
-        lcd.printout(count)
+        printNumber(count)

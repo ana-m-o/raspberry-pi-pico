@@ -1,5 +1,7 @@
 # Click Counter
 
+The purpose of this small project is to learn how to use an RGB LCD display.
+
 ## Components
 
 - Raspberry Pi Pico (+ usb cable, breadboard and jumper wires).
@@ -8,7 +10,11 @@
 
 ## Function
 
-The click counter shows on the screen the number of clicks made with a button. There is a second button for reset counter to 0.
+The click counter shows on the screen the number of clicks made with a button.
+
+There is a second button for reset counter to 0.
+
+![](./images/click-counter.gif)
 
 ## Connections
 
