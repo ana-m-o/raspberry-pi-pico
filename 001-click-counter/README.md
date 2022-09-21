@@ -6,7 +6,7 @@ The purpose of this small project is to learn how to use an RGB LCD display.
 
 - Raspberry Pi Pico (+ usb cable, breadboard and jumper wires).
 - 2 push buttons
-- I2C LCD1602 RGB Display.
+- I2C LCD1602 RGB Display ([Waveshare docs](https://www.waveshare.com/wiki/LCD1602_RGB_Module)).
 
 ## Function
 
